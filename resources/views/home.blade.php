@@ -5,7 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Image Gallery') }}</div>
+                
+                <div class="card-header">{{ Auth::user()->name.' Image Gallery'}}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,6 +14,23 @@
                         {{ session('status') }}
                     </div>
                     @endif
+
+
+
+             <div class="row mx-1">
+                    <div class="col-md-3 d-flex">
+                    <b>Name</b><b class="mx-2">:</b>
+                    <p>{{ Auth::user()->name }}</p>
+                </div>
+                <div class="col-md-3 d-flex">
+
+                    <b>Email</b><b class="mx-2">:</b>
+                    <p>{{ Auth::user()->email }}</p>
+                </div>
+                
+                
+            </div>
+
 
 
                     <table class="table table-striped table-bordered">
